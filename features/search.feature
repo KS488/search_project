@@ -9,3 +9,10 @@ Feature: Search Google
     When I enter 'jacket' into the search box
     And I press enter
     Then the search result summary should contain the word 'jacket'
+
+  Scenario: Search a simple term
+    Given I'm on the Google home page
+    When I enter 'Echo Dot' into the search box
+      And I press enter
+    Then the page results should contain the word 'Echo Dot'
+
